@@ -1,0 +1,18 @@
+# Compiled Java classes
+*.class
+
+# Eclipse
+bin/
+.settings/
+.project
+.classpath
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
