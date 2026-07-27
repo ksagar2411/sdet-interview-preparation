@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class ArraySumViaMethod {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input the size of array: ");
 		int size = sc.nextInt();

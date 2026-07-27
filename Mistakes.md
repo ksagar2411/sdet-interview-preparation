@@ -255,6 +255,34 @@ Only then start coding.
 
 ---
 
+# Mistake #11 - Early Return Inside Loop
+
+Problem:
+Largest element search returned too early.
+
+Wrong:
+
+```java
+for (int i = 0; i < arr.length - 1; i++) {
+    // ...
+    return templargest;
+}
+```
+
+Correct:
+
+- Initialize the largest value before the loop.
+- Compare every element inside the loop.
+- Return after the loop finishes.
+
+Learning:
+
+- A `return` inside a loop stops the loop immediately.
+- Always let the search complete before returning the result.
+- Initialize with an array value, not a fixed constant like `0`.
+
+---
+
 # Interview Reminder
 
 Always mention:
