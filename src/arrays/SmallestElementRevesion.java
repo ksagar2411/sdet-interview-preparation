@@ -1,3 +1,41 @@
+/*
+ * ==========================================
+ * Problem: Find the smallest element in an array
+ * ==========================================
+ *
+ * 1. What is the input?
+ * [10, 25, 7, 41, 3]
+ *
+ * 2. What is the expected output?
+ * 3
+ *
+ * 3. Which data structure is required?
+ * Array
+ *
+ * 4. Which loop should I use?
+ * A forward for loop to compare each element with the current minimum
+ *
+ * ==========================================
+ * Algorithm
+ * ==========================================
+ *
+ * Step 1:
+ * Read the size and elements of the array.
+ *
+ * Step 2:
+ * Initialize the first element as the current smallest value.
+ *
+ * Step 3:
+ * Traverse the array and update the smallest value whenever a smaller element is found.
+ *
+ * Step 4:
+ * Print the final smallest value.
+ *
+ * ==========================================
+ * Time Complexity : O(n)
+ * Space Complexity: O(1)
+ * ==========================================
+ */
 package arrays;
 
 import java.util.Scanner;

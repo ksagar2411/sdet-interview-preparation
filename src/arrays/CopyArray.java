@@ -1,19 +1,19 @@
 /*
  * ==========================================
- * Problem: Count occurrences of a target value in an array
+ * Problem: Copy an array
  * ==========================================
  *
  * 1. What is the input?
- * [2, 4, 2, 6, 2]
+ * [1, 2, 3, 4]
  *
  * 2. What is the expected output?
- * 3
+ * [1, 2, 3, 4]
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A while loop or for loop to scan each element
+ * A forward for loop to copy each element
  *
  * ==========================================
  * Algorithm
@@ -23,57 +23,55 @@
  * Read the size and elements of the array.
  *
  * Step 2:
- * Read the target value to search for.
+ * Create a new array of the same length.
  *
  * Step 3:
- * Traverse the array and count how many times the target appears.
+ * Traverse the original array and copy each element to the new array.
  *
  * Step 4:
- * Print the count.
+ * Print the copied array.
  *
  * ==========================================
  * Time Complexity : O(n)
- * Space Complexity: O(1)
+ * Space Complexity: O(n)
  * ==========================================
  */
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class CountOccurences {
+public class CopyArray {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of array: ");
         int size = sc.nextInt();
         int[] arr = inputElements(size, sc);
-        System.out.print("Enter the target value to get its index: ");
-        int target = sc.nextInt();
         sc.close();
 
         // calling smallest element method
-        int count = occuranceCount(arr, target);
-        System.out.println("The element " + target + " has occured " + count + " times");
+        int[] copiedarray = copyArray(arr);
+        System.out.println("The new copied array is " + Arrays.toString(copiedarray));
+
     }
 
     public static int[] inputElements(int size, Scanner sc) {
         int[] arr = new int[size];
         for (int i = 0; i < arr.length; i++) {
-            System.out.print("Enter the element value at index " + i + ": ");
+            System.out.print("Enter the element value at index " + i + ":");
             arr[i] = sc.nextInt();
         }
         return arr;
     }
 
-    public static int occuranceCount(int[] arr, int target) {
-        int i = 0, count = 0;
-        while (i < arr.length) {
-            if (arr[i] == target) {
-                count += 1;
-            }
-            i++;
+    public static int[] copyArray(int[] arr) {
+        int[] copiedArray = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            copiedArray[i] = arr[i];
         }
-        return count;
+        copiedArray[0] = 999;
+        return copiedArray;
 
     }
 }

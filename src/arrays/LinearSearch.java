@@ -1,3 +1,41 @@
+/*
+ * ==========================================
+ * Problem: Search for a target element in an array
+ * ==========================================
+ *
+ * 1. What is the input?
+ * [10, 20, 30, 40]
+ *
+ * 2. What is the expected output?
+ * 2 for target 30
+ *
+ * 3. Which data structure is required?
+ * Array
+ *
+ * 4. Which loop should I use?
+ * A while loop or for loop to compare each element
+ *
+ * ==========================================
+ * Algorithm
+ * ==========================================
+ *
+ * Step 1:
+ * Read the size and elements of the array.
+ *
+ * Step 2:
+ * Read the target element to search for.
+ *
+ * Step 3:
+ * Traverse the array from left to right.
+ *
+ * Step 4:
+ * Return the index when the target is found; otherwise return -1.
+ *
+ * ==========================================
+ * Time Complexity : O(n)
+ * Space Complexity: O(1)
+ * ==========================================
+ */
 package arrays;
 
 import java.util.Scanner;
