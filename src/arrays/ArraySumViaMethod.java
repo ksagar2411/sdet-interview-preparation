@@ -1,3 +1,38 @@
+/*
+ * ==========================================
+ * Problem: Calculate the sum of array elements using a method
+ * ==========================================
+ *
+ * 1. What is the input?
+ * [1, 2, 3, 4, 5]
+ *
+ * 2. What is the expected output?
+ * 15
+ *
+ * 3. Which data structure is required?
+ * Array
+ *
+ * 4. Which loop should I use?
+ * A forward for loop to add each element
+ *
+ * ==========================================
+ * Algorithm
+ * ==========================================
+ *
+ * Step 1:
+ * Read the array size and elements.
+ *
+ * Step 2:
+ * Call a method that sums all elements of the array.
+ *
+ * Step 3:
+ * Return the total sum and print it.
+ *
+ * ==========================================
+ * Time Complexity : O(n)
+ * Space Complexity: O(1)
+ * ==========================================
+ */
 package arrays;
 
 import java.util.Arrays;

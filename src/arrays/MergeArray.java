@@ -1,3 +1,48 @@
+/*
+ * ==========================================
+ * Problem: Merge two arrays into one array
+ * ==========================================
+ *
+ * 1. What is the input?
+ * Array 1: [1, 2, 3]
+ * Array 2: [4, 5]
+ *
+ * 2. What is the expected output?
+ * [1, 2, 3, 4, 5]
+ *
+ * 3. Which data structure is required?
+ * Array
+ *
+ * 4. Which loop should I use?
+ * A forward for loop to copy elements from both arrays
+ *
+ * ==========================================
+ * Algorithm
+ * ==========================================
+ *
+ * Step 1:
+ * Read the size and elements of the first array.
+ *
+ * Step 2:
+ * Read the size and elements of the second array.
+ *
+ * Step 3:
+ * Create a new array large enough to hold both arrays.
+ *
+ * Step 4:
+ * Copy all elements from the first array into the new array.
+ *
+ * Step 5:
+ * Copy all elements from the second array after the first array elements.
+ *
+ * Step 6:
+ * Print the merged array.
+ *
+ * ==========================================
+ * Time Complexity : O(n + m) --> O(n)
+ * Space Complexity: O(n + m) --> O(n)
+ * ==========================================
+ */
 package arrays;
 
 import java.util.Arrays;
