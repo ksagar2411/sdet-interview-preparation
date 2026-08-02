@@ -310,3 +310,51 @@ If I get stuck:
 Only then ask for help if I'm still stuck.
 
 This habit will make me a better SDET.
+
+---
+
+# Array contracts and edge cases
+
+## Empty-array access
+
+`LargestElement`, `SmallestElement`, `SecondLargest`, `CopyArray`, and `RotateArrayBy1` access `arr[0]`. They need a non-empty input contract or a guard.
+
+## Missing-number size mismatch
+
+Several missing-number programs allocate `n` positions but read `n - 1` values. The default `0` is outside the intended range but makes the representation misleading. The XOR implementation also uses a range inconsistent with that allocation, so it can return the wrong result.
+
+## No-result and sentinel values
+
+`TwoSum` returns the input array when no pair exists even though its caller expects two indexes. `SecondLargest` returns `Integer.MIN_VALUE` when no distinct answer exists. Both need explicit result contracts.
+
+---
+
+# String performance and input
+
+## Repeated concatenation
+
+`ReverseString`, `ReverseWords`, and `Palindrome` append to immutable strings inside loops. This creates temporary strings and makes the current approach O(n²); use `StringBuilder` for linear construction.
+
+## Token versus sentence input
+
+`next()` reads one word, while `nextLine()` reads a complete sentence. Choose based on whether spaces belong in the input.
+
+---
+
+# Bootcamp Day 1 — Pointer and return-flow mistakes
+
+## Previous element versus running minimum
+
+For stock profit, comparing only with the previous day's price misses the best earlier buy. Keep a `minPrice` that represents the lowest price seen before the current day.
+
+## Read and write pointers moving together
+
+In sorted duplicate removal, `read` must inspect every value, but `write` advances only for a newly accepted value. Moving both together leaves duplicates in the unique prefix.
+
+## Global minimum versus running minimum
+
+The minimum price must come from an earlier day. A global minimum found later cannot be used as the buy price for an earlier sale.
+
+## Incomplete return paths
+
+Every non-`void` method must return on every possible execution path. Use one final return after a full scan when no early answer is found.
