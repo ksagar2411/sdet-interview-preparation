@@ -416,3 +416,148 @@ The current method assumes a non-empty array. Descending prices return `0`, repr
 How would you return the buy/sell indexes? How does the solution change when multiple transactions are allowed?
 ### Related Pattern
 [Running Minimum](../patterns/RunningMinimum.md)
+
+---
+
+# Bootcamp Day 2
+
+## Second Largest Element (`SecondLargest`)
+
+### Problem Statement
+
+Return the second-largest **distinct** value in an integer array.
+
+### Brute Force Approach
+
+Use two traversals: first find the largest value, then find the largest value strictly smaller than it.
+
+### Optimal Approach
+
+Use the Running Maximum pattern in one traversal, maintaining `largest` and `secondLargest`.
+
+### Invariant
+
+After processing each element, `largest` is the greatest value seen so far and `secondLargest` is the second-greatest distinct value seen so far.
+
+### Algorithm
+
+Initialize `largest` from the first array value. For each remaining value, promote it when it is larger than `largest`; otherwise update `secondLargest` only when it falls strictly between the two tracked values.
+
+### Time Complexity
+
+O(n)
+
+### Space Complexity
+
+O(1)
+
+### Edge Cases
+
+- Duplicate largest values must not become the second-largest distinct value.
+- A single-element or all-equal array has no distinct answer.
+- `-1` is a clearer result only if negative values are disallowed; `Integer.MIN_VALUE` can also be a valid input. Define the contract explicitly.
+
+### Common Mistakes
+
+- Initializing `largest` to `0` instead of an array value.
+- Forgetting the distinctness check (`arr[i] != largest`).
+- Processing the first element again after using it for initialization.
+
+### Learning
+
+Running Maximum is the opposite of the running-minimum technique used for stock profit.
+
+### Related Pattern
+
+[Running Maximum](../patterns/RunningMaximum.md)
+
+## Merge Two Sorted Arrays (`MergeSortedArray`)
+
+### Problem Statement
+
+Merge two ascending arrays into one ascending array.
+
+### Pattern
+
+Three-pointer merge: `arr1Index`, `arr2Index`, and `mergedArrayIndex`.
+
+### Invariant
+
+The merged prefix is always sorted, and each pointer refers to the first unprocessed element in its array.
+
+### Algorithm
+
+1. While both arrays have unprocessed values, copy the smaller current value.
+2. Copy any remaining values from the first array.
+3. Copy any remaining values from the second array.
+
+### Time Complexity
+
+O(n + m)
+
+### Space Complexity
+
+O(n + m) for the merged output.
+
+### Edge Cases
+
+- Either input can be empty.
+- Equal values are retained in sorted order.
+- One input can be fully consumed before the other.
+
+### Mistakes Made
+
+- Special-casing the first output element instead of applying the same comparison rule.
+- Attempting one `for` loop instead of the three canonical merge phases.
+- Copying from `arr1` instead of `arr2` in the final remaining-elements loop.
+
+### Learning
+
+This is the standard merge operation reused by Merge Sort.
+
+### Related Pattern
+
+Merge pattern / two pointers with a third output pointer.
+
+## Intersection of Two Arrays — Brute Force (`ArrayIntersection`)
+
+### Problem Statement
+
+Return the distinct values that occur in both input arrays.
+
+### Brute Force Approach
+
+For each value in the first array, use a nested loop to search the second array. Before adding a match, scan the result prefix to prevent duplicates.
+
+### Algorithm
+
+1. Allocate a result buffer of `min(arr1.length, arr2.length)`.
+2. For each first-array value, search the second array for a match.
+3. If found, ensure it has not already been added, then append it.
+4. Return only the populated portion of the result buffer.
+
+### Time Complexity
+
+O(n × m) in the worst case; duplicate checking remains within that bound.
+
+### Space Complexity
+
+O(min(n, m)) for the result buffer.
+
+### Edge Cases
+
+- Empty input produces an empty intersection.
+- Duplicate values should appear once in the result.
+- Result order follows the first array.
+
+### Discussion
+
+Removing duplicates with only arrays requires another scan of the result. A `HashSet` naturally tracks membership and uniqueness; its optimized solution is intentionally postponed until Java Collections.
+
+### Learning
+
+The need for a better data structure should be recognized before learning the implementation details of `HashSet`.
+
+### Related Pattern
+
+Nested Comparison Pattern; future [HashMap / Set](../patterns/HashMap.md) optimization.

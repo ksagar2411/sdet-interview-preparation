@@ -2,12 +2,12 @@ Java Interview Preparation
 
 ## Progress
 
-- **Total problems solved:** 27 coding problems
+- **Total problems solved:** 31 coding problems
 - **Java/OOP practice examples:** 2
-- **Problems by topic:** Arrays — 22; Strings — 5
+- **Problems by topic:** Arrays — 26; Strings — 5
 - **Patterns learned:** Linear Scan, Two Pointers, Running Maximum/Minimum, Array Transformation, Missing Number, Brute Force Pairs
 - **Next patterns:** HashMap, Sliding Window, Binary Search, Recursion
-- **Last updated:** 2026-08-02
+- **Last updated:** 2026-08-04
 
 ## Repository guide
 
@@ -23,6 +23,12 @@ Java Interview Preparation
 - [ ] Collections and HashMap
 - [ ] Java 8
 - [ ] Multithreading and exception handling
+
+## Bootcamp Progress
+
+- [x] **Day 1:** Missing Number variants, sorted duplicate removal, and stock profit
+- [x] **Day 2 cold retest:** Day 1 patterns solved from memory without notes
+- [x] **Day 2 new work:** Second Largest, Merge Two Sorted Arrays, and Array Intersection
 
 Topics Covered
 
