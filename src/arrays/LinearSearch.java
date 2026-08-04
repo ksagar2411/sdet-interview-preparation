@@ -1,35 +1,42 @@
 /*
  * ==========================================
- * Problem: Search for a target element in an array
+ * Problem: Search for a target element in an array and return its index.
+ *          You are given an integer array and a value x, and you need to determine whether x exists in the array.
+ *          If it exists, return its position; otherwise return -1. This is the fundamental linear search problem.
  * ==========================================
  *
  * 1. What is the input?
- * [10, 20, 30, 40]
+ * An integer array and a search value x.
+ * Example: [10, 20, 30, 40] and target = 30
  *
  * 2. What is the expected output?
- * 2 for target 30
+ * The index of the found element, or -1 if the element is not present.
+ * Example: 2
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A while loop or for loop to compare each element
+ * A while loop or a for loop to compare every array element with the target value.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the size and elements of the array.
+ * Read the array size and all elements.
  *
  * Step 2:
- * Read the target element to search for.
+ * Read the target value x.
  *
  * Step 3:
- * Traverse the array from left to right.
+ * Start from the first index and compare every element with x.
  *
  * Step 4:
- * Return the index when the target is found; otherwise return -1.
+ * If the match is found, return that index immediately.
+ *
+ * Step 5:
+ * If the scan finishes without a match, return -1.
  *
  * ==========================================
  * Time Complexity : O(n)

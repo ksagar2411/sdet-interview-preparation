@@ -1,34 +1,42 @@
 /*
  * ==========================================
- * Problem: Copy an array
+ * Problem: Create a duplicate copy of an array.
+ *          You are given an existing array and must produce a second array containing the same values
+ *          in the same order. This problem teaches how to allocate a new array and populate it by iterating
+ *          through the original array.
  * ==========================================
  *
  * 1. What is the input?
- * [1, 2, 3, 4]
+ * An integer array of size n.
+ * Example: [1, 2, 3, 4]
  *
  * 2. What is the expected output?
- * [1, 2, 3, 4]
+ * A separate array with identical values in the same order.
+ * Example: [1, 2, 3, 4]
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A forward for loop to copy each element
+ * A forward for loop to read one element from the original array and write it into the new array.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the size and elements of the array.
+ * Read the size and elements of the original array.
  *
  * Step 2:
  * Create a new array of the same length.
  *
  * Step 3:
- * Traverse the original array and copy each element to the new array.
+ * Traverse the original array using an index variable.
  *
  * Step 4:
+ * Copy each element to the matching index in the new array.
+ *
+ * Step 5:
  * Print the copied array.
  *
  * ==========================================

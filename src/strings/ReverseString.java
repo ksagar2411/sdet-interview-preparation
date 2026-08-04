@@ -1,21 +1,23 @@
 /*
  * ==========================================
- * Problem:
- * Reverse String
+ * Problem: Reverse the characters of a given string.
+ *          You are given a word and must print it in reverse order character by character.
+ *          This is a classic string manipulation problem that tests backward traversal and string building.
  * ==========================================
  *
  * 1. What is the input?
- * Example:
- * "Java"
+ * A single string.
+ * Example: "Java"
  *
  * 2. What is the expected output?
- * "avaJ"
+ * The string in reverse order.
+ * Example: "avaJ"
  *
  * 3. Which data structure is required?
  * String
  *
  * 4. Which loop should I use?
- * Reverse for loop from str.length()-1
+ * A reverse for loop starting from the last character index and moving backward.
  *
  * ==========================================
  * Algorithm
@@ -25,16 +27,16 @@
  * Read the input string.
  *
  * Step 2:
- * Create an empty string "rev".
+ * Create an empty string to hold the reversed result.
  *
  * Step 3:
- * Traverse the string from last character to first.
+ * Traverse the string from the last character to the first character.
  *
  * Step 4:
- * Append each character to "rev".
+ * Append each character to the reversed string.
  *
  * Step 5:
- * Print "rev".
+ * Print the reversed string.
  *
  * ==========================================
  * Time Complexity : O(n)

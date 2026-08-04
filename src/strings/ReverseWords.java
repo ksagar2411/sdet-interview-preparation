@@ -1,43 +1,46 @@
 /*
  * ==========================================
- * Problem: Reverse words
+ * Problem: Reverse each word in a sentence while preserving the original word order.
+ *          You are given a sentence and must reverse every individual word, but not the sequence of words.
+ *          This problem helps practice splitting strings, word-level reversal, and string concatenation.
  * ==========================================
  *
  * 1. What is the input?
- * Example:
- * "Java is easy"
+ * A sentence or string containing multiple words.
+ * Example: "Java is easy"
  *
  * 2. What is the expected output?
- *  There are 3 possibilities
- *  1. "easy is Java"
- *  2. "avaJ si ysae"
- *  3. "ysae si avaJ"
+ * The words should remain in the same order, but each word should be reversed.
+ * Example: "avaJ si ysae"
  *
  * 3. Which data structure is required?
- * String
+ * String and String array from split()
  *
  * 4. Which loop should I use?
- * for
+ * A forward for loop to process every word after splitting the sentence.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the input string. and initialize counter with 0
+ * Read the sentence as a string.
  *
  * Step 2:
- * run for loop till length starting from 0
+ * Split the sentence into individual words using space as the delimiter.
  *
  * Step 3:
- * at each charAt(i) if it belong to (a,e,i,o,u), increment counter
+ * For each word, reverse it character by character using a reverse loop.
  *
  * Step 4:
- * Print the counter value
+ * Append the reversed word back into the output sentence.
+ *
+ * Step 5:
+ * Print the final transformed sentence.
  *
  * ==========================================
  * Time Complexity : O(n)
- * Space Complexity: O(1)
+ * Space Complexity: O(n)
  * ==========================================
  */
 package strings;

@@ -1,36 +1,42 @@
 /*
  * ==========================================
- * Problem: Vowel count in a string or sentence
+ * Problem: Count the number of vowels in a given string.
+ *          You are given a word or sentence and must count how many characters are vowels.
+ *          This problem is useful for practicing character-by-character traversal and conditional counting.
  * ==========================================
  *
  * 1. What is the input?
- * Example:
- * "Java is easy"
+ * A string input from the user.
+ * Example: "Java is easy"
  *
  * 2. What is the expected output?
- * 5 (a,a,i,e,a)
+ * The total number of vowels present in the string.
+ * Example: 5
  *
  * 3. Which data structure is required?
  * String
  *
  * 4. Which loop should I use?
- * Run a increment for loop and keep increasing counter whenever a vowel occur
+ * A forward for loop to inspect each character and increment the counter when a vowel is found.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the input string. and initialize counter with 0
+ * Read the string and convert it to lowercase if needed.
  *
  * Step 2:
- * run for loop till length starting from 0
+ * Initialize a counter variable to 0.
  *
  * Step 3:
- * at each charAt(i) if it belong to (a,e,i,o,u), increment counter
+ * Traverse the string from left to right.
  *
  * Step 4:
- * Print the counter value
+ * If the current character is one of a, e, i, o, or u, increment the vowel count.
+ *
+ * Step 5:
+ * Print the final vowel count.
  *
  * ==========================================
  * Time Complexity : O(n)

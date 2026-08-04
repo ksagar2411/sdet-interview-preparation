@@ -1,20 +1,24 @@
 /*
  * ==========================================
- * Problem: Merge two arrays into one array
+ * Problem: Merge two arrays into a single combined array.
+ *          You are given two arrays of integers and must create a new array that contains all values
+ *          from the first array followed by all values from the second array. This is a common data-structure
+ *          exercise that tests array allocation and element copying.
  * ==========================================
  *
  * 1. What is the input?
- * Array 1: [1, 2, 3]
- * Array 2: [4, 5]
+ * Two integer arrays: arr1 and arr2.
+ * Example: arr1 = [1, 2, 3], arr2 = [4, 5]
  *
  * 2. What is the expected output?
- * [1, 2, 3, 4, 5]
+ * A new single array that contains all elements from both arrays in order.
+ * Example: [1, 2, 3, 4, 5]
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A forward for loop to copy elements from both arrays
+ * A forward for loop to copy values from both arrays into the new result array.
  *
  * ==========================================
  * Algorithm
@@ -27,20 +31,20 @@
  * Read the size and elements of the second array.
  *
  * Step 3:
- * Create a new array large enough to hold both arrays.
+ * Create a new array with length equal to arr1.length + arr2.length.
  *
  * Step 4:
- * Copy all elements from the first array into the new array.
+ * Copy all elements of arr1 into the new array from index 0 onward.
  *
  * Step 5:
- * Copy all elements from the second array after the first array elements.
+ * Copy all elements of arr2 into the next available positions in the merged array.
  *
  * Step 6:
- * Print the merged array.
+ * Print the merged result.
  *
  * ==========================================
- * Time Complexity : O(n + m) --> O(n)
- * Space Complexity: O(n + m) --> O(n)
+ * Time Complexity : O(n + m)
+ * Space Complexity: O(n + m)
  * ==========================================
  */
 package arrays;

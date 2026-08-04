@@ -1,35 +1,42 @@
 /*
  * ==========================================
- * Problem: Count occurrences of a target value in an array
+ * Problem: Count how many times a given target value appears in an array.
+ *          You are given an array of integers and a number x, and your task is to count the total
+ *          number of occurrences of x in the array. This is a standard frequency-counting problem.
  * ==========================================
  *
  * 1. What is the input?
- * [2, 4, 2, 6, 2]
+ * An integer array and a target value x.
+ * Example: [2, 4, 2, 6, 2] and target = 2
  *
  * 2. What is the expected output?
- * 3
+ * The number of times the target value occurs in the array.
+ * Example: 3
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A while loop or for loop to scan each element
+ * A while loop or a for loop to traverse the array and compare each value with the target.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the size and elements of the array.
+ * Read the array size and its elements.
  *
  * Step 2:
  * Read the target value to search for.
  *
  * Step 3:
- * Traverse the array and count how many times the target appears.
+ * Traverse each element from left to right.
  *
  * Step 4:
- * Print the count.
+ * If the current element matches the target, increment the count.
+ *
+ * Step 5:
+ * Print the final frequency.
  *
  * ==========================================
  * Time Complexity : O(n)

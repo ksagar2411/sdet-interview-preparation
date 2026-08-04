@@ -1,35 +1,43 @@
 /*
  * ==========================================
- * Problem: Find the largest element in an array
+ * Problem: Find the largest element present in an integer array.
+ *          You are given an array of numbers and need to return the greatest value among all elements.
+ *          This problem is a classic scan-and-compare exercise that introduces the concept of maintaining
+ *          a running maximum while iterating through the array.
  * ==========================================
  *
  * 1. What is the input?
- * [10, 25, 7, 41, 3]
+ * An integer array of size n.
+ * Example: [10, 25, 7, 41, 3]
  *
  * 2. What is the expected output?
- * 41
+ * The largest number in the array.
+ * Example: 41
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A forward for loop to compare each element with the current maximum
+ * A forward for loop to compare each element with the current maximum value.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the array size and its elements.
+ * Read the array size and store all its elements.
  *
  * Step 2:
- * Initialize the first element as the current largest value.
+ * Assume the first element is the largest value for now.
  *
  * Step 3:
- * Traverse the array and update the largest value whenever a bigger element is found.
+ * Traverse the array from the second element onward.
  *
  * Step 4:
- * Print the final largest value.
+ * If a value is greater than the current largest value, update the largest value.
+ *
+ * Step 5:
+ * After the loop finishes, print the stored maximum value.
  *
  * ==========================================
  * Time Complexity : O(n)

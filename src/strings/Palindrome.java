@@ -1,21 +1,24 @@
 /*
  * ==========================================
- * Problem:
- * Palindrome
+ * Problem: Determine whether a given string is a palindrome.
+ *          You are given a word or sentence and must check if it reads the same forwards and backwards.
+ *          This problem is a standard string reversal comparison exercise that helps practice indexing,
+ *          reversal logic, and equality checks.
  * ==========================================
  *
  * 1. What is the input?
- * Example:
- * "SAGAS"
+ * A single string entered by the user.
+ * Example: "SAGAS"
  *
  * 2. What is the expected output?
- * "SAGAS"
+ * A decision indicating whether the string is a palindrome.
+ * Example: true
  *
  * 3. Which data structure is required?
- * for loop
+ * String
  *
  * 4. Which loop should I use?
- * Reverse for loop starting str.length()-1
+ * A reverse for loop to read the characters from end to start and build a reversed string.
  *
  * ==========================================
  * Algorithm
@@ -25,16 +28,19 @@
  * Read the input string.
  *
  * Step 2:
- * Create an empty string "rev".
+ * Create an empty string to hold the reversed version.
  *
  * Step 3:
- * Traverse the string from last character to first.
+ * Traverse the original string from the last character to the first character.
  *
  * Step 4:
- * Append each character to "rev".
+ * Append each character to the reversed string.
  *
  * Step 5:
- * compare rev with original string str
+ * Compare the reversed string to the original string.
+ *
+ * Step 6:
+ * If both are equal, print that the string is a palindrome; otherwise print that it is not.
  *
  * ==========================================
  * Time Complexity : O(n)

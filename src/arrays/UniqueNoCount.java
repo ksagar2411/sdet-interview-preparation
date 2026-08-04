@@ -1,3 +1,41 @@
+/*
+ * ==========================================
+ * Problem: Count the number of unique elements in an array
+ * ==========================================
+ *
+ * 1. What is the input?
+ * [1, 2, 2, 3, 4, 4]
+ *
+ * 2. What is the expected output?
+ * 4
+ *
+ * 3. Which data structure is required?
+ * Array
+ *
+ * 4. Which loop should I use?
+ * A two-pointer style forward loop to compare adjacent unique values
+ *
+ * ==========================================
+ * Algorithm
+ * ==========================================
+ *
+ * Step 1:
+ * Read the size and elements of the array.
+ *
+ * Step 2:
+ * Traverse the array using a write pointer and a read pointer.
+ *
+ * Step 3:
+ * If a different value is found, place it next to the last unique value.
+ *
+ * Step 4:
+ * Return the count of unique values.
+ *
+ * ==========================================
+ * Time Complexity : O(n)
+ * Space Complexity: O(1)
+ * ==========================================
+ */
 package arrays;
 
 import java.util.Scanner;

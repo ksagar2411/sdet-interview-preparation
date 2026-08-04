@@ -10,6 +10,9 @@ bin/
 # VS Code
 .vscode/
 
+# Practice files
+src/practice/
+
 # Logs
 *.log
 

@@ -1,32 +1,39 @@
 /*
  * ==========================================
- * Problem: Find the sum of all array elements
+ * Problem: Find the sum of all elements present in an array.
+ *          Given an integer array, you need to accumulate every value and print the final total.
+ *          This is a basic array-traversal problem that tests loop control and arithmetic operations.
  * ==========================================
  *
  * 1. What is the input?
- * [1, 2, 3, 4, 5]
+ * An integer array of size n.
+ * Example: [1, 2, 3, 4, 5]
  *
  * 2. What is the expected output?
- * 15
+ * The total sum of all elements.
+ * Example: 15
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A forward for loop to add every array element
+ * A forward for loop to visit every index and accumulate the values.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the array size and its elements.
+ * Read the array size and all elements into the array.
  *
  * Step 2:
- * Traverse the array and add each element to a running sum.
+ * Start a variable called sum with value 0.
  *
  * Step 3:
- * Print the sum and the array.
+ * Traverse the array from index 0 to n - 1 and add each value to sum.
+ *
+ * Step 4:
+ * Print the final sum after the loop ends.
  *
  * ==========================================
  * Time Complexity : O(n)

@@ -1,40 +1,42 @@
 /*
  * ==========================================
- * Problem:
- * Reverse an array
+ * Problem: Reverse the order of elements in an array.
+ *          You are given an integer array and must produce a new array where the elements appear in reverse order.
+ *          This is a common interview problem that tests traversal direction and array reordering.
  * ==========================================
  *
  * 1. What is the input?
- * Example:
- * [1, 2, 3, 4]
+ * An integer array.
+ * Example: [1, 2, 3, 4]
  *
  * 2. What is the expected output?
- * [4, 3, 2, 1]
+ * The array in reverse order.
+ * Example: [4, 3, 2, 1]
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * Reverse for loop
+ * A reverse for loop that starts from the last index and moves backward.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the array size and its elements.
+ * Read the array size and all its elements.
  *
  * Step 2:
- * Create an empty array to store the reversed values.
+ * Create a new array to hold the reversed result.
  *
  * Step 3:
- * Traverse the array from last element to first.
+ * Start scanning from the last index of the original array.
  *
  * Step 4:
- * Store each element into the new array in reverse order.
+ * Copy each element into the new array in the reversed sequence.
  *
  * Step 5:
- * Print the reversed array.
+ * Print the new array.
  *
  * ==========================================
  * Time Complexity : O(n)

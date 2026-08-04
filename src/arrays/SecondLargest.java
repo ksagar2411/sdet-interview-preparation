@@ -1,35 +1,45 @@
 /*
  * ==========================================
- * Problem: Find the second largest element in an array
+ * Problem: Find the second largest element in an integer array.
+ *          You are given an array of numbers and must identify the second greatest value after the largest one.
+ *          This problem is a good example of tracking multiple candidate values while scanning the array.
  * ==========================================
  *
  * 1. What is the input?
- * [10, 25, 7, 41, 3]
+ * An integer array of size n.
+ * Example: [10, 25, 7, 41, 3]
  *
  * 2. What is the expected output?
- * 25
+ * The second largest distinct or current best value in the array.
+ * Example: 25
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A forward for loop to compare each element with the current largest and second largest values
+ * A forward for loop to compare every value with the current largest and second largest values.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the array size and its elements.
+ * Read the array size and all elements.
  *
  * Step 2:
- * Initialize the first element as the current largest value and set the second largest to the minimum integer value.
+ * Initialize the first element as the current largest value and set the second-largest value to the minimum integer.
  *
  * Step 3:
- * Traverse the array and update the largest and second largest values accordingly.
+ * Traverse the array from left to right.
  *
  * Step 4:
- * Print the final second largest value.
+ * If the current value is greater than the current largest value, shift the largest to second largest and update the largest.
+ *
+ * Step 5:
+ * If the current value is smaller than the largest but greater than the second largest, update the second largest.
+ *
+ * Step 6:
+ * Print the second largest value at the end.
  *
  * ==========================================
  * Time Complexity : O(n)

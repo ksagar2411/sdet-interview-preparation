@@ -1,34 +1,42 @@
 /*
  * ==========================================
- * Problem: Calculate the average of array elements
+ * Problem: Calculate the average of all elements in an integer array.
+ *          You are given a list of numbers and need to find their arithmetic mean by summing all values
+ *          and then dividing by the total count. This problem is useful for understanding array traversal,
+ *          running totals, and integer division behavior in Java.
  * ==========================================
  *
  * 1. What is the input?
- * [1, 2, 3, 4, 5]
+ * An integer array of size n.
+ * Example: [1, 2, 3, 4, 5]
  *
  * 2. What is the expected output?
- * 3
+ * The average of all elements in the array.
+ * Example: 3
  *
  * 3. Which data structure is required?
  * Array
  *
  * 4. Which loop should I use?
- * A forward for loop to add every array element
+ * A forward for loop to visit each element and accumulate the total sum.
  *
  * ==========================================
  * Algorithm
  * ==========================================
  *
  * Step 1:
- * Read the array size and its elements.
+ * Read the size of the array and store each value in the array.
  *
  * Step 2:
- * Traverse the array and add each element to a running sum.
+ * Traverse the array and keep adding every element into a sum variable.
  *
  * Step 3:
- * Divide the sum by the number of elements and print the result.
+ * Divide the final sum by the total number of elements.
  *
- * Note: Because the method returns an int, fractional averages are truncated.
+ * Step 4:
+ * Print the integer result of the division.
+ *
+ * Note: Because the method returns an int, any fraction is truncated.
  *
  * ==========================================
  * Time Complexity : O(n)
