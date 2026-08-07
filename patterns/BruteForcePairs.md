@@ -4,7 +4,15 @@
 
 Two Sum.
 
-## Core idea
+## When to recognize it
+
+Use it as a baseline when a problem asks for a pair and no faster lookup structure is in scope.
+
+## Invariant
+
+Before each outer-loop advance, every pair starting at earlier indexes has been tested exactly once.
+
+## Typical algorithm
 
 Use nested loops to test every unique pair; start the inner loop at `i + 1`.
 

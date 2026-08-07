@@ -1,31 +1,28 @@
 # Read/Write Pointer
 
-## Problems using this pattern
+## When to recognize it
 
-- [`UniqueNoCount.java`](../src/arrays/UniqueNoCount.java) — `read` scans every sorted value; `write` marks the unique prefix.
+Use it when values must be removed, moved, compacted, or filtered in place while preserving accepted-value order.
 
-## Core idea
+## Invariant
 
-Use `read` to visit every input value and `write` to mark the end of the accepted output prefix. The output is stored in the front of the same array.
+The prefix ending at `write - 1` contains exactly the accepted values in their required order. `read` points to the value being inspected.
 
-## Generic template
+## Typical algorithm
 
-```java
-if (arr.length == 0) return 0;
-int write = 0;
-for (int read = 1; read < arr.length; read++) {
-    if (arr[read] != arr[write]) {
-        arr[++write] = arr[read];
-    }
-}
-return write + 1;
-```
+Scan every value with `read`. When it satisfies the rule, write it at `write` and advance `write`. The remaining suffix can be filled or ignored according to the result contract.
 
 ## Common mistakes
 
-- Moving `write` for a duplicate.
+- Advancing `write` for rejected values.
 - Moving `read` and `write` together.
-- Using this adjacent comparison on an unsorted array.
+- Using adjacent duplicate comparison on an unsorted array.
+
+## Representative problems
+
+- Remove Duplicates from Sorted Array
+- Move Zeroes
+- Unique Number Count
 
 ## Complexity
 

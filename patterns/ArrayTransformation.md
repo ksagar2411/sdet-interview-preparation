@@ -4,7 +4,15 @@
 
 Copy Array, Reverse Array, Rotate Array by One, Move Zeroes With New Array, and Merge Array.
 
-## Core idea
+## When to recognize it
+
+Use it when the task copies, reorders, rotates, or filters array values.
+
+## Invariant
+
+The completed output prefix contains the correctly transformed processed input.
+
+## Typical algorithm
 
 Build a result array or mutate the input while tracking destination indexes and temporary values.
 

@@ -39,18 +39,31 @@
 package arrays;
 
 public class PivotIndex {
-    
-    public static void main(String[] args){
 
-        int[] arr = {1,7,3,6,5,6};
-        // int[] nums = {1,1,1,1,1};
+    public static void main(String[] args) {
+
+        //int[] arr = { 1, 7, 6, 5, 14 };
+        int[] arr = {2,1,-1};
         System.out.println(findPivotIndex(arr));
 
     }
 
-    public static int findPivotIndex(int[] arr){
+    public static int findPivotIndex(int[] arr) {
 
+        int totalSum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            totalSum += arr[i];
+        }
+        int pivotLeftSide = 0;
+        for (int pivot = 0; pivot < arr.length; pivot++) {
+            int pivotRightSide = totalSum - pivotLeftSide - arr[pivot];
+            if (pivotLeftSide == pivotRightSide) {
+                return pivot;
+            } else {
+                pivotLeftSide += arr[pivot];
+            }
+        }
 
-        return 0;
+        return -1;
     }
 }

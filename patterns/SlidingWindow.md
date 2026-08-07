@@ -4,7 +4,15 @@
 
 Not yet used in `src/`.
 
-## Core idea
+## When to recognize it
+
+Use it for a contiguous subarray or substring whose bounds change while maintaining a condition.
+
+## Invariant
+
+The maintained state describes exactly the current window from `left` through `right`.
+
+## Typical algorithm
 
 Maintain a contiguous range; expand right, then shrink left until the range satisfies its constraint.
 

@@ -1,30 +1,27 @@
 # Running Minimum
 
-## Problems using this pattern
+## When to recognize it
 
-- [`BuySellStock.java`](../src/arrays/BuySellStock.java) — tracks the lowest earlier price before calculating each day's profit.
+Use it for the smallest value seen so far, cheapest earlier price, or minimum prefix value.
 
-## Core idea
+## Invariant
 
-At each day, store the smallest price seen on an earlier or current day. Compare today's price with that running minimum to get the best valid profit ending today.
+`minSoFar` is the smallest valid value from earlier processed positions.
 
-## Generic template
+## Typical algorithm
 
-```java
-int minPrice = prices[0];
-int maxProfit = 0;
-for (int i = 1; i < prices.length; i++) {
-    minPrice = Math.min(minPrice, prices[i]);
-    maxProfit = Math.max(maxProfit, prices[i] - minPrice);
-}
-return maxProfit;
-```
+Initialize from the first value. Scan left to right, use the current minimum to evaluate the current value, then update the minimum for later positions as required by the problem.
 
 ## Common mistakes
 
-- Comparing only with the previous price.
-- Using a global minimum that occurs after the sell day.
-- Forgetting the empty-array contract.
+- Comparing only with the previous value.
+- Using a minimum that occurs after the current sale/value.
+- Accessing the first element without an empty-input contract.
+
+## Representative problems
+
+- Smallest Element
+- Best Time to Buy and Sell Stock
 
 ## Complexity
 

@@ -1,34 +1,30 @@
 # Two Pointers
 
-## Problems using this pattern
+## When to recognize it
 
-- [`ReverseArrayUsing2Pointer.java`](../src/arrays/ReverseArrayUsing2Pointer.java) — pointers move inward and swap mirrored values.
-- [`MoveZeroesWithoutNewArray.java`](../src/arrays/MoveZeroesWithoutNewArray.java) — read pointer scans while the write position advances for non-zero values.
-- [`UniqueNoCount.java`](../src/arrays/UniqueNoCount.java) — read/write-pointer variant for a sorted array.
+Use two pointers for mirrored positions, pairs, or two sorted inputs that must be processed in order.
 
-`Palindrome` is a natural next application, but no array program uses it.
+## Invariant
 
-## Core idea
+For inward scans, values outside the pointers are already finalized. For a merge, each pointer identifies the first unprocessed value and the output prefix is sorted.
 
-Use two indexes that move toward each other, or separate read and write positions.
+## Typical algorithm
 
-## Generic template
-
-```java
-int left = 0, right = arr.length - 1;
-while (left < right) {
-    // use or swap arr[left] and arr[right]
-    left++;
-    right--;
-}
-```
+Move pointers inward for reverse/palindrome work. For a merge, copy the smaller current value while both inputs remain, then copy either remainder.
 
 ## Common mistakes
 
 - Forgetting to move a pointer.
 - Using the wrong stopping condition.
-- Losing the required stable order.
+- Omitting a remainder-copy phase in a merge.
+- Losing stable order when a problem requires it.
+
+## Representative problems
+
+- Reverse Array
+- Merge Two Sorted Arrays
+- Pair Sum / Two Sum variants
 
 ## Complexity
 
-Usually O(n) time and O(1) auxiliary space.
+Usually O(n) or O(n + m) time and O(1) auxiliary space, excluding an output array.

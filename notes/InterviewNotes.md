@@ -1,57 +1,43 @@
-== vs equals()
+# Interview Notes
 
-StringBuilder vs StringBuffer
+## Answer Framework
 
-HashMap Internal Working
+Explain the input contract, pattern, invariant, complexity, edge cases, and any optimized follow-up before walking through code.
 
-Why String is Immutable
+## Common Follow-ups
 
-ArrayList vs LinkedList
+### Second Largest
 
-Fail Fast vs Fail Safe
+- Must the result be distinct?
+- What should happen when no second distinct value exists?
 
-volatile
+### Merge Two Sorted Arrays
 
-synchronized
+- Can the merge be done in place when the first array has spare capacity?
+- Why are three phases required after one input is exhausted?
 
-Comparable vs Comparator
+### Best Time to Buy and Sell Stock
 
----
+- Return buy/sell indexes as well as profit.
+- How does the solution change for multiple transactions?
 
-# Current Coding Revision
+### Leaders in Array
 
-- [x] Linear scans and loop boundaries
-- [x] Array transformations and two pointers
-- [x] Running maximum/minimum
-- [x] Missing-number variants
-- [ ] HashMap Two Sum
-- [ ] Binary search
-- [ ] Sliding window
-- [ ] Recursion
+- Are equal values leaders?
+- Should results be returned in input order or discovery order?
 
----
+### Move Zeroes
 
-# Bootcamp Day 1
+- Must non-zero values retain their relative order?
+- Is a new output array allowed, or is O(1) auxiliary space required?
 
-## Problems Solved
+### Pivot Index
 
-- Find Missing Number — Brute Force
-- Find Missing Number — Optimized Summation
-- Find Missing Number — Formula
-- Find Missing Number — XOR
-- Remove Duplicates from Sorted Array
-- Best Time to Buy and Sell Stock
+- Why does `rightSum = totalSum - leftSum - currentValue` work?
+- Can the pivot be the first or last index?
 
-## Patterns Learned
+### Product of Array Except Self
 
-- Read/write pointer
-- Running minimum
-- Running count
-- Formula and XOR cancellation
-
-## Key Learnings
-
-- Sorted duplicate removal preserves its unique prefix in place.
-- Stock profit uses the lowest earlier price, not an adjacent or global comparison.
-- Summation and XOR are O(n), O(1) alternatives to the O(n²) missing-number scan.
-- A method needs a return value on every non-`void` execution path.
+- Can it be solved without division?
+- Can the O(n) output be produced with O(1) extra space beyond that output?
+- How should zeroes and integer overflow be handled?

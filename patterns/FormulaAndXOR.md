@@ -6,7 +6,15 @@
 - [`FindMissingUsingXOR.java`](../src/arrays/FindMissingUsingXOR.java) — XORs values in `1..n` and the supplied array.
 - [`FindMissingNoOptimised.java`](../src/arrays/FindMissingNoOptimised.java) — uses the same summation idea, calculating the expected sum with a loop.
 
-## Core idea
+## When to recognize it
+
+Use it for a known complete integer range with exactly one missing value.
+
+## Invariant
+
+The accumulator represents the difference or XOR cancellation between the expected range and processed values.
+
+## Typical algorithm
 
 For values `1..n` with exactly one missing value, compare the expected complete range with the supplied values. Summation uses arithmetic-series subtraction; XOR uses cancellation.
 

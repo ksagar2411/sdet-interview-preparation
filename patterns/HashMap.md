@@ -4,7 +4,15 @@
 
 No current implementation uses a `HashMap`. It is the next optimization for Two Sum.
 
-## Core idea
+## When to recognize it
+
+Use it for complements, frequencies, membership, or revisiting values.
+
+## Invariant
+
+The map stores the relevant information for values processed before the current index.
+
+## Typical algorithm
 
 Store seen values with indexes and look up the needed complement.
 

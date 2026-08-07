@@ -1,29 +1,30 @@
-# Running Maximum / Minimum
+# Running Maximum
 
-## Problems using this pattern
+## When to recognize it
 
-Largest Element, Smallest Element, Second Largest, and Maximum Consecutive Ones.
+Use this pattern for largest value, best score, second-largest distinct value, or an element that must exceed all values on one side.
 
-## Core idea
+## Invariant
 
-Keep the best value seen so far; some problems also keep a current streak or second-best value.
+`maxSoFar` is the greatest value in the processed prefix. In a reverse scan, `maxRight` is the greatest value in the processed suffix.
 
-## Generic template
+## Typical algorithm
 
-```java
-int best = arr[0];
-for (int i = 1; i < arr.length; i++) {
-    if (arr[i] > best) best = arr[i];
-}
-return best;
-```
+Initialize from the first valid value, scan once, and update the tracked maximum when the current value is larger. For leaders, scan right to left and record an element before replacing `maxRight`.
 
 ## Common mistakes
 
-- Initializing to `0` when inputs may be negative.
-- Returning inside the loop.
-- Not defining behavior when a distinct second value is absent.
+- Initializing to `0` when negative values are valid.
+- Returning before the scan is complete.
+- Treating duplicate maxima as a second distinct value.
+- Forgetting to define whether equal values are leaders.
+
+## Representative problems
+
+- Largest Element
+- Second Largest Distinct Element
+- Leaders in Array (reverse running maximum)
 
 ## Complexity
 
-O(n) time and O(1) space.
+O(n) time and O(1) auxiliary space, excluding any output collection.

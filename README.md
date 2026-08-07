@@ -2,11 +2,11 @@ Java Interview Preparation
 
 ## Progress
 
-- **Total problems solved:** 34 coding problems
+- **Total problems solved:** 37 coding problems
 - **Java/OOP practice examples:** 2
-- **Problems by topic:** Arrays — 29; Strings — 5
-- **Patterns learned:** Linear Scan, Two Pointers, Running Maximum/Minimum, Reverse Running Maximum, Read/Write Pointer, Prefix Sum, Array Transformation, Missing Number, Brute Force Pairs
-- **Next patterns:** Sliding Window, HashMap, Binary Search, Recursion
+- **Problems by topic:** Arrays — 32; Strings — 5
+- **Patterns learned:** Linear Scan, Two Pointers, Running Maximum/Minimum, Reverse Running Maximum, Read/Write Pointer, Prefix Sum, Prefix Product, Suffix Product, Array Transformation, Missing Number, Brute Force Pairs
+- **Next patterns:** Prefix Sum applications, Sliding Window, HashMap, Binary Search, Recursion
 - **Last updated:** 2026-08-07
 
 ## Repository guide
@@ -33,12 +33,15 @@ Java Interview Preparation
 - [x] Two Pointer
 - [x] Prefix Sum (Introduction)
 
-## Bootcamp Progress
+## Knowledge Base Coverage
 
-- [x] **Day 1:** Missing Number variants, sorted duplicate removal, and stock profit
-- [x] **Day 2 cold retest:** Day 1 patterns solved from memory without notes
-- [x] **Day 2 new work:** Second Largest, Merge Two Sorted Arrays, and Array Intersection
-- [x] **Day 3:** Cold retests; Leaders in Array, Move Zeroes, and Running Sum
+- [x] Array fundamentals and transformations
+- [x] Running minimum and maximum
+- [x] Read/write pointer and two-pointer techniques
+- [x] Prefix sums and prefix/suffix products
+- [x] Missing-number variants
+- [ ] HashMap and set optimizations
+- [ ] Sliding window, binary search, and recursion
 
 Topics Covered
 

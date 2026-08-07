@@ -4,7 +4,15 @@
 
 Not yet used in `src/`.
 
-## Core idea
+## When to recognize it
+
+Use it when a sorted search space allows a comparison to discard one half.
+
+## Invariant
+
+If the target exists, it remains inside the current `[left, right]` search range.
+
+## Typical algorithm
 
 Search a sorted range by discarding half after each midpoint comparison.
 

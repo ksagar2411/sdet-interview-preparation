@@ -4,7 +4,15 @@
 
 Find Missing Number Brute Force, Summation, Formula, and XOR.
 
-## Core idea
+## When to recognize it
+
+Use it when exactly one value is missing from a declared complete range.
+
+## Invariant
+
+The expected-range state and actual processed values differ only by the missing number.
+
+## Typical algorithm
 
 Compare the expected complete range `1..n` with the supplied values.
 

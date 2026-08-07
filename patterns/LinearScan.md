@@ -4,7 +4,15 @@
 
 Sum/Average of Array, Count Occurrences, Linear Search, Largest/Smallest, Second Largest, Sorted Array Checker, Vowel Count, and Consonant Count.
 
-## Core idea
+## When to recognize it
+
+Use it when every element must be inspected once and the answer can be maintained as small state.
+
+## Invariant
+
+The state variable correctly summarizes all values processed so far.
+
+## Typical algorithm
 
 Visit every element once while maintaining small state: a sum, count, best value, or boolean.
 

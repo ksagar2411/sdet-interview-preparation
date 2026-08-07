@@ -6,7 +6,15 @@
 - [`MaxConsecutive1Count.java`](../src/arrays/MaxConsecutive1Count.java) — maintains a current count and resets it when the streak ends.
 - `VowelsCount` and `ConsonantsCount` use the same idea but are string programs, not array programs.
 
-## Core idea
+## When to recognize it
+
+Use it for frequencies, consecutive runs, and totals accumulated during one scan.
+
+## Invariant
+
+The counter represents the required count for the processed prefix or active streak.
+
+## Typical algorithm
 
 Maintain a counter while scanning. Increment on an accepted value; reset it when a streak-ending value appears.
 
